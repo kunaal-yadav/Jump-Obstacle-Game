@@ -1,0 +1,65 @@
+/*  <!-- Author: Kunal Yadav, 000930870 --> */
+body {
+  text-align: center;
+  background-color: aqua;
+  margin: 0;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+button:hover {
+  background: lightblue;
+}
+
+#game {
+  text-align: center;
+}
+
+svg {
+  border: 2px solid #000;
+  background-color: #87CEEB;
+}
+
+
+.jumping {
+  animation: jump 0.8s;
+}
+
+#obstacles {
+  animation: animateObstacles 4s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes animateObstacles {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-650px);
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-120px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
